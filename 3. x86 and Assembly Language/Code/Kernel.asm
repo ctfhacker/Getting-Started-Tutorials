@@ -39,9 +39,9 @@ MultibootInfo_Structure dd 0
 _Kernel_Start:
 
 	; BEGIN - Set Screen Colour
-	mov EAX, 0x2000 ; 0x20-- = Green bg, black text, 0x--00 = null (i.e. no) character 
+	mov EAX, 0x0241 ; 0x20-- = Green bg, black text, 0x--00 = null (i.e. no) character 
 	mov EBX, 0xB8000 ; 0xB8000 = Start of display memory
-	mov ECX, 2000
+	mov ECX, 10
 Print:
 	mov word [EBX], AX
 	add EBX, 2
